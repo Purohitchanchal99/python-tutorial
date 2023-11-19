@@ -1,0 +1,111 @@
+{% extends "master.html" %}
+{% block title %}
+  Details about {{ mymember.firstname }}
+{% endblock %}
+
+{% block content %}
+
+    
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 20px;
+    }
+    code {
+        display: block;
+        white-space: pre-wrap;
+        background-color: #f4f4f4;
+        padding: 10px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+    }
+    pre {
+        background-color: #f8f8f8;
+        padding: 10px;
+        border-radius: 5px;
+        overflow-x: auto;
+    }
+</style>
+
+    <h2 style="color: blue;">Python Class and Object</h2>
+
+    <p>
+        In Python, a class is a blueprint for creating objects. An object is an instance of a class, which encapsulates data (attributes) and behavior (methods). The class defines the structure and behavior, while the object is an actual instance of that structure.
+    </p>
+
+    <h4>Define a Class</h4>
+    <pre>
+        <code>
+class Car:
+    brand = ""
+    model = ""
+    
+    def __init__(self, brand, model):
+        self.brand = brand
+        self.model = model
+    
+    def display_info(self):
+        print(f"{self.brand} {self.model}")
+        </code>
+    </pre>
+
+    <h4>Create an Object</h4>
+    <pre>
+        <code>
+# create an object of the Car class
+car1 = Car("Toyota", "Camry")
+
+# access attributes and call methods
+car1.display_info()
+        </code>
+    </pre>
+    <p>Output: Toyota Camry</p>
+
+    <h4>Object Methods</h4>
+    <p>
+        Object methods are functions defined within a class that operate on the attributes of an object. They represent the behavior associated with the class. In the example below, the <code>display_info</code> method is an object method.
+    </p>
+
+    <pre>
+        <code>
+class Car:
+    brand = ""
+    model = ""
+    
+    def __init__(self, brand, model):
+        self.brand = brand
+        self.model = model
+    
+    def display_info(self):
+        print(f"{self.brand} {self.model}")
+
+# create an object of the Car class
+car1 = Car("Toyota", "Camry")
+
+# access attributes and call methods
+car1.display_info()
+        </code>
+    </pre>
+    <p>Output: Toyota Camry</p>
+
+    <h3>Example</h3>
+    <p>
+        Let's create a class called <code>Car</code> with attributes <code>brand</code> and <code>model</code>. We'll define a constructor (<code>__init__</code>) to initialize the object's attributes and an object method (<code>display_info</code>) to display information about the car.
+    </p>
+
+    <p>
+        In the example below, we'll create an object (<code>car1</code>) of the <code>Car</code> class, set its attributes, and call the <code>display_info</code> method to print the car's information.
+    </p>
+
+    <pre>
+        <code>
+# create an object of the Car class
+car1 = Car("Toyota", "Camry")
+
+# access attributes and call methods
+car1.display_info()
+        </code>
+    </pre>
+    <p>Output: Toyota Camry</p>
+
+{% endblock %}

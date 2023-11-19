@@ -1,0 +1,88 @@
+{% extends "master.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Exception Handling</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        h1 {
+            color: blue;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.4;
+        }
+        .code {
+            font-family: monospace;
+            background-color: #f2f2f2;
+            padding: 10px;
+            border: 1px solid #ccc;
+            white-space: pre;
+        }
+        code {
+            font-family: monospace;
+            background-color: red;
+            padding: 10px;
+            border: 1px solid #ccc;
+            white-space: pre;
+        }
+        .python-list {
+            list-style: none;
+            padding: 0;
+        }
+        .python-list li {
+            margin-bottom: 10px;
+        }
+        .python-list li strong {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 mx-auto"> <!-- Changed from col-md-6 to col-md-12 -->
+                <h1>Exception Handling in Python</h1>
+                <!-- Remaining content remains the same -->
+                <p>A Python program terminates as soon as it encounters an error. In Python, an error can be a syntax error or an exception. In this article, you will see what an exception is and how it differs from a syntax error. After that, you will learn about raising exceptions and making assertions. Then, you’ll finish with a demonstration of the try and except block.</p>
+                <h2>Exceptions versus Syntax Errors</h2>
+                <p>Syntax errors occur when the parser detects an incorrect statement. Observe the following example:</p>
+                <div class="code">
+                    >>> print(0 / 0 ))
+                      File "&lt;stdin&gt;", line 1
+                        print(0 / 0 ))
+                                      ^
+                    SyntaxError: invalid syntax
+                </div>
+                <p>The arrow indicates where the parser ran into the syntax error. In this example, there was one bracket too many. Remove it and run your code again:</p>
+                <div class="code">
+                    >>> print(0 / 0)
+                    Traceback (most recent call last):
+                      File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+                    ZeroDivisionError: integer division or modulo by zero
+                </div>
+                <!-- Continue adding content as needed -->
+                <h2>Summing Up</h2>
+                <p>After seeing the difference between syntax errors and exceptions, you learned about various ways to raise, catch, and handle exceptions in Python. In this article, you saw the following options:</p>
+                <ul class="python-list">
+                    <li><strong>raise</strong> allows you to throw an exception at any time.</li>
+                    <li><strong>assert</strong> enables you to verify if a certain condition is met and throw an exception if it isn’t.</li>
+                    <li>In the <strong>try</strong> clause, all statements are executed until an exception is encountered.</li>
+                    <li><strong>except</strong> is used to catch and handle the exception(s) that are encountered in the try clause.</li>
+                    <li><strong>else</strong> lets you code sections that should run only when no exceptions are encountered in the try clause.</li>
+                    <li><strong>finally</strong> enables you to execute sections of code that should always run, with or without any previously encountered exceptions.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+{% endblock %}

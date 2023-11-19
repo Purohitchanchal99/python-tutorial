@@ -1,0 +1,8 @@
+<!-- templates/topics/add_topic.html -->
+<h1>Add Topic</h1>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Submit</button>
+</form>
+<a href="{% url 'topics' %}">Back to Topics</a>

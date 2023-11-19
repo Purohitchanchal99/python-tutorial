@@ -1,0 +1,131 @@
+
+
+{% extends "master.html" %}
+{% block title %}
+  Details about {{ mymember.firstname }}
+{% endblock %}
+
+{% block content %}
+  <style>
+    .content-box {
+      background-color: white;
+      color: black;
+      padding: 10px;
+      border: 1px solid #ccc;
+      margin-bottom: 20px;
+    }
+
+    .example-box {
+      background-color: white;
+      color: black;
+      padding: 10px;
+      border: 1px solid #ccc;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+
+    .green-heading {
+      color: green;
+    }
+
+    .blue-heading {
+      color: blue;
+    }
+  </style>
+
+  <h1 class="blue-heading">{{ mymember.topic_name }}</h1>
+  <p>{{ mymember.description }}</p>
+
+  <div class="content-box">
+    <p>
+      Control structures are an essential part of programming, allowing developers to dictate the flow and behavior of a program based on certain conditions or requirements. There are primarily three types of control structures:
+    </p>
+
+    <p class="blue-heading">Sequential Control:</p>
+    <p>In sequential control, statements are executed in a linear fashion, one after the other. The program follows a top-down approach, executing each statement in the order they are written.</p>
+
+    <p class="blue-heading">Selection Control:</p>
+    <p>Selection control structures are used to make decisions in a program. They determine which section of code to execute based on conditions or criteria. The most common selection control structure is the "if" statement, which allows the program to take different paths depending on the truth or falsity of a condition.</p>
+
+    <p class="blue-heading">Repetition Control:</p>
+    <p>Repetition control structures, also known as loops, are used to execute a section of code multiple times. Loops can be executed a fixed number of times or until a specific condition is met. Common loop types include "for" loops, "while" loops, and "do-while" loops.</p>
+  </div>
+
+  <div class="content-box">
+    <div class="blue-heading">Types of Control Flow in Python:</div>
+    <pre>
+      <p class="blue-heading">The if statement</p>
+      <p class="blue-heading">The if-else statement</p>
+      <p class="blue-heading">The nested-if statement</p>
+      <p class="blue-heading">The if-elif-else ladder</p>
+    </pre>
+  </div>
+
+  <h2 class="green-heading">Python if statement</h2>
+  <div class="example-box">
+    <p>The if statement is the most simple decision-making statement. It is used to decide whether a certain statement or block of statements will be executed or not.</p>
+  </div>
+
+  <h2 class="green-heading">Python Conditions and If Statements</h2>
+  <div class="example-box">
+    <pre>
+      <ul>
+        <li>Equals: a == b</li>
+        <li>Not Equals: a != b</li>
+        <li>Less than: a &lt; b</li>
+        <li>Less than or equal to: a &lt;= b</li>
+        <li>Greater than: a &gt; b</li>
+        <li>Greater than or equal to: a &gt;= b</li>
+      </ul>
+    </pre>
+  </div>
+
+  <h2 class="green-heading">Example:</h2>
+  <div class="example-box">
+    <pre>
+      a = 33
+      b = 200
+      {% if b > a %}
+        {{ "b is greater than a" }}
+      {% endif %}
+    </pre>
+  </div>
+
+  <h2 class="green-heading">Elif</h2>
+  <div class="example-box">
+    <p>The <code>elif</code> keyword is Python's way of saying "if the previous conditions were not true, then try this condition."</p>
+  </div>
+
+  <h3 class="blue-heading">Example 1: Using Elif</h3>
+  <div class="example-box">
+    <pre>
+      a = 33
+      b = 33
+      {% if b > a %}
+        {{ "b is greater than a" }}
+      {% elif a == b %}
+        {{ "a and b are equal" }}
+      {% endif %}
+    </pre>
+  </div>
+
+  <h2 class="green-heading">Else</h2>
+  <div class="example-box">
+    <p>The <code>else</code> keyword catches anything that isn't caught by the preceding conditions.</p>
+  </div>
+
+  <h3 class="blue-heading">Example 2: Using Else</h3>
+  <div class="example-box">
+    <pre>
+      a = 200
+      b = 33
+      {% if b > a %}
+        {{ "b is greater than a" }}
+      {% elif a == b %}
+        {{ "a and b are equal" }}
+      {% else %}
+        {{ "a is greater than b" }}
+      {% endif %}
+    </pre>
+  </div>
+{% endblock %}

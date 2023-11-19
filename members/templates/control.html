@@ -1,0 +1,13 @@
+{% extends "master.html" %}
+{% load static %}
+{% block title %}
+  Details about {{ flow.topic_name }}
+{% endblock %}
+
+{% block content %}
+  <h1>Control Flow Details</h1>
+  
+  <p>{{ flow.topic_name }}</p>
+  {% comment %} <p>Back to <a href="members/details/">tutorials</a></p> {% endcomment %}
+ 
+{% endblock %}

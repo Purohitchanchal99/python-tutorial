@@ -1,0 +1,145 @@
+{% extends "master.html" %}
+{% load static %}
+{% block title %}
+  Details about {{ mymember.firstname }}
+{% endblock %}
+
+{% block content %}
+  <h1 style="color: blue;">{{ mymember.topic_name }}</h1>
+  <p>{{ mymember.description }}</p>
+  <!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        .code {
+            font-family: "Courier New", monospace;
+            background-color: #f7f7f7;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        h2 {
+            color: #555;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Python Functions and Arguments</h1>
+
+    <p>Python Functions are blocks of statements that perform specific tasks. They allow you to group commonly or repeatedly
+        performed tasks together and make them reusable. Instead of writing the same code repeatedly for different inputs,
+        you can call functions to execute the code contained within them.</p>
+
+    <h2>Benefits of Using Functions</h2>
+    <ul>
+        <li>Enhance Code Readability</li>
+        <li>Promote Code Reusability</li>
+    </ul>
+
+    <h2>Python Function Declaration</h2>
+    <p>The syntax to declare a function is:</p>
+
+    <div class="code">
+        def function_name(parameters):
+        """Docstring"""
+        # body of the function
+        return expression
+    </div>
+
+    <h2>Types of Functions in Python</h2>
+    <p>There are mainly two types of functions in Python:</p>
+
+    <ul>
+        <li><strong>Built-in library functions:</strong> These are standard functions in Python that are available for use.</li>
+        <li><strong>User-defined functions:</strong> You can create your own functions based on your requirements.</li>
+    </ul>
+
+    <h2>Creating a Function in Python</h2>
+    <p>You can create a user-defined function in Python using the <code>def</code> keyword. You can add any functionality and
+        properties to it as needed:</p>
+
+    <div class="code">
+        # A simple Python function
+        def fun():
+            print("Welcome to GFG")
+    </div>
+
+    <h2>Calling a Python Function</h2>
+    <p>After creating a function in Python, you can call it by using the function name followed by parentheses containing
+        parameters (if any) for that function:</p>
+
+    <div class="code">
+        # A simple Python function
+        def fun():
+            print("Welcome to GFG")
+
+        # Driver code to call the function
+        fun()
+    </div>
+
+    <h2>Python Function with Parameters</h2>
+    <p>You can define and call functions with parameters. Parameters are used to pass values to functions. You can specify
+        parameter data types and return types:</p>
+
+    <div class="code">
+        def add(num1: int, num2: int) -> int:
+            """Add two numbers"""
+            num3 = num1 + num2
+            return num3
+
+        # Driver code
+        num1, num2 = 5, 15
+        ans = add(num1, num2)
+        print(f"The addition of {num1} and {num2} results {ans}.")
+    </div>
+
+    <h2>Python Function Arguments</h2>
+    <p>Arguments are the values passed inside the parentheses of a function. A function can have any number of arguments,
+        separated by commas. For example, here's a function that checks whether a number is even or odd:</p>
+
+    <div class="code">
+        # A simple Python function to check whether x is even or odd
+        def evenOdd(x):
+            if (x % 2 == 0):
+                print("even")
+            else:
+                print("odd")
+        # Driver code to call the function
+        evenOdd(2)
+        evenOdd(3)
+    </div>
+
+    <h2>Types of Python Function Arguments</h2>
+    <p>Python supports various types of function arguments:</p>
+
+    <ul>
+        <li><strong>Default arguments:</strong> Parameters with default values.</li>
+        <li><strong>Keyword arguments (named arguments):</strong> Arguments with specific parameter names.</li>
+        <li><strong>Positional arguments:</strong> Arguments passed based on their positions.</li>
+        <li><strong>Arbitrary arguments (variable-length arguments *args and **kwargs):</strong> Arguments that can vary in number and keyword arguments.</li>
+    </ul>
+
+    <!-- Add more content here -->
+
+</body>
+
+</html>
+{% endblock %}

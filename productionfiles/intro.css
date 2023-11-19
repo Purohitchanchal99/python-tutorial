@@ -1,0 +1,26 @@
+/* yourapp/static/css/styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 50px;
+}
+
+h1 {
+    color:black;
+    text-align: center;
+}
+
+p {
+    line-height: 1.5;
+    margin: 20px 0;
+}
+ 
+
+.code {
+    background-color:floralwhite;
+    padding: 10px;
+    border: 10px solid #ddd;
+    border-radius: 5px;
+    white-space: pre-wrap;
+    font-family: Consolas, "Courier New", monospace;
+}

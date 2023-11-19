@@ -1,0 +1,214 @@
+<!-- myapp/templates/data_types_template.html -->
+{% extends "master.html" %}
+<!-- myapp/templates/data_types_template.html -->
+
+{% load static %}
+{%block content%}
+<!DOCTYPE html>
+
+<head>
+    
+    <title>Python Data Types</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f2f2f2;
+        }
+
+        h2 {
+            color: #007BFF;
+        }
+
+        code {
+            font-family: "Courier New", Courier, monospace;
+            background-color: #f8f9fa;
+            padding: 2px 4px;
+            border: 1px solid #d6d8db;
+            border-radius: 4px;
+        }
+
+        pre {
+            background-color: #f8f9fa;
+            padding: 10px;
+            border: 1px solid #d6d8db;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+
+        .output {
+            color: green;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+        .flow-diagram {
+            max-width: 100%; /* Ensure the image doesn't exceed its container's width */
+            height: auto; /* Maintain the aspect ratio when resizing */
+            display: block; /* Remove extra space beneath the image */
+            margin: 20px 0; /* Add some margin for spacing */
+            border: 1px solid #d6d8db; /* Add a border around the image */
+            border-radius: 6px; /* Optional: Add border-radius for rounded corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle box shadow */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="section">
+        <h2>Python Data Types</h2>
+       
+
+        <p>Data types are the classification or categorization of data items. They represent the kind of value that tells what operations can be performed on a particular data. Since everything is an object in Python programming, data types are actually classes and variables are instances (objects) of these classes. The following are the standard or built-in data types in Python:</p>
+        <img class="flow-diagram" src="{% static 'images\Datatypes-in-python.jpg' %}">
+        
+       
+        <h1>Numeric Data Type</h1>
+        <p>Python, numeric data type is used to hold numeric values.
+
+          Integers, floating-point numbers and complex numbers fall under Python numbers category. They are defined as int, float and complex classes in Python.
+          
+          int - holds signed integers of non-limited length.
+          float - holds floating decimal points and it's accurate up to 15 decimal places.
+          complex - holds complex numbers.
+          We can use the type() function to know which class a variable or a value belongs to.
+          
+          Let's see an example,</p>
+        <pre>
+<code>
+num1 = 5
+print(num1, 'is of type', type(num1))
+
+num2 = 2.0
+print(num2, 'is of type', type(num2))
+
+num3 = 1+2j
+print(num3, 'is of type', type(num3))
+</code></pre>
+
+        <div class="output"><strong>Output:</strong></div>
+        <pre>
+<code>
+5 is of type &lt;class 'int'&gt;
+2.0 is of type &lt;class 'float'&gt;
+(1+2j) is of type &lt;class 'complex'&gt;
+</code></pre>
+    </div>
+
+    <div class="section">
+        <h3>List Data Type</h3>
+        <p>List is an ordered collection of similar or different types of items separated by commas and enclosed within brackets [ ]. For example,</p>
+        <pre>
+<code>
+languages = ["Swift", "Java", "Python"]
+
+# access element at index 0
+print(languages[0])   # Swift
+
+# access element at index 2
+print(languages[2])   # Python
+</code></pre>
+
+        <div class="output"><strong>Output:</strong></div>
+        <pre>
+<code>
+Swift
+Python
+</code></pre>
+    </div>
+
+    <div class="section">
+        <h3>Tuple Data Type</h3>
+        <p>Tuple is an ordered sequence of items same as a list. The only difference is that tuples are immutable. Tuples once created cannot be modified.
+
+          In Python, we use the parentheses () to store items of a tuple. For example,</p>
+
+        <pre>
+<code>
+product = ('Xbox', 499.99)
+
+# access element at index 0
+print(product[0])   # Xbox
+
+# access element at index 1
+print(product[1])   # 499.99
+</code></pre>
+
+        <div class="output"><strong>Output:</strong></div>
+        <pre>
+<code>
+Xbox
+499.99
+</code></pre>
+    </div>
+
+    <div class="section">
+        <h3>String Data Type</h3>
+        <p>string is a sequence of characters represented by either single or double quotes. For example,</p>
+        <pre>
+<code>
+name = 'Python'
+print(name)
+
+message = 'Python for beginners'
+print(message)
+</code></pre>
+
+        <div class="output"><strong>Output:</strong></div>
+        <pre>
+<code>
+Python
+Python for beginners
+</code></pre>
+    </div>
+
+    <div class="section">
+        <h3>Set Data Type</h3>
+        <p>Set is an unordered collection of unique items. Set is defined by values separated by commas inside braces { }. For example,
+
+        </p>
+        <pre>
+<code>
+student_id = {112, 114, 116, 118, 115}
+
+# display student_id elements
+print(student_id)
+
+# display type of student_id
+print(type(student_id))
+</code></pre>
+
+        <div class="output"><strong>Output:</strong></div>
+        <pre>
+<code>
+{112, 114, 115, 116, 118}
+&lt;class 'set'&gt;
+</code></pre>
+    </div>
+
+    <div class="section">
+        <h3>Dictionary Data Type</h3>
+        <p>Python dictionary is an ordered collection of items. It stores elements in key/value pairs.
+
+          Here, keys are unique identifiers that are associated with each value.
+          
+          Let's see an example,</p>
+        <pre>
+<code>
+capital_city = {'Nepal': 'Kathmandu', 'Italy': 'Rome', 'England': 'London'}
+
+print(capital_city)
+</code></pre>
+
+        <div class="output"><strong>Output:</strong></div>
+        <pre>
+<code>
+{'Nepal': 'Kathmandu', 'Italy': 'Rome', 'England': 'London'}
+</code></pre>
+    </div>
+
+</body>
+</html>
+
+{% endblock %}

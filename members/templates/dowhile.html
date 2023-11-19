@@ -1,0 +1,126 @@
+{% extends "master.html" %}
+{% load static %}
+{% block title %}
+  Details about {{ mymember.firstname }}
+{% endblock %}
+
+{% block content %}
+  <h1 style="color: blue;">{{ mymember.topic_name }}</h1>
+  <p>{{ mymember.description }}</p>
+  <!DOCTYPE html>
+  <html>
+  <head>
+      <title style="color: blue;">Understanding Do-While Loops in Programming</title>
+      <style>
+          h1,  {
+              color: #333;
+          }
+          pre {
+              background-color: #f5f5f5;
+              padding: 10px;
+              border: 1px solid #ccc;
+          }
+          code {
+              font-family: 'Courier New', monospace;
+              font-size: 14px;
+          }
+          p {
+              margin: 10px 0;
+          }
+      </style>
+  </head>
+  <body>
+      <h1 style="color: blue;">Understanding Do-While Loops in Programming</h1>
+
+      <p>A "do-while" loop is a type of control structure used in programming that allows a specific block of code to be executed repeatedly as long as a certain condition remains true. What distinguishes the "do-while" loop from other loop constructs, such as the "while" loop, is that it guarantees the execution of the code block at least once, even if the loop condition is false from the start..</p>
+</p>
+              <img class="flow-diagram" src="{% static 'Do-While-loop.png' %}">
+      <h2>How Do Do-While Loops Work in Practice?</h2>
+      <p>Do-while loops are commonly used for tasks like accepting and processing user input. For example, you can implement a number-guessing game using a do-while loop in JavaScript:</p>
+      
+      <pre>
+          <code>
+const LOW = 1;
+const HIGH = 10;
+
+let secretNumber = Math.floor(Math.random() * HIGH) + LOW;
+let clue = '';
+let number = null;
+
+do {
+  let guess = prompt(`Guess a number between ${LOW} and ${HIGH} ${clue}`);
+  number = parseInt(guess);
+  if (number > secretNumber) {
+    clue = `(less than ${number})`;
+  } else if (number < secretNumber) {
+    clue = `(greater than ${number})`;
+  }
+} while (number != secretNumber);
+
+alert(`You guessed it! The secret number is ${number}`);
+          </code>
+      </pre>
+
+      <p>For an equivalent Python implementation:</p>
+
+      <pre>
+          <code>
+# guess.py
+
+from random import randint
+
+LOW, HIGH = 1, 10
+
+secret_number = randint(LOW, HIGH)
+clue = ""
+
+while True:
+    guess = input(f"Guess a number between {LOW} and {HIGH} {clue} ")
+    number = int(guess)
+    if number > secret_number:
+        clue = f"(less than {number})"
+    elif number < secret_number:
+        clue = f"(greater than {number})"
+    else:
+        break
+
+print(f"You guessed it! The secret number is {number}")
+          </code>
+      </pre>
+
+      <h2>Differences Between Do-While and While Loops</h2>
+      <p>The primary difference between do-while and while loops is when the loop condition is checked. Here's a summary of the key differences:</p>
+      <table style="border-collapse: collapse; width: 100%; border: 1px solid black;">
+        <tr>
+          <th style="border: 1px solid black; padding: 8px; text-align: left;">while</th>
+          <th style="border: 1px solid black; padding: 8px; text-align: left;">do-while</th>
+        </tr>
+        <tr>
+          <td style="border: 1px solid black; padding: 8px; text-align: left;">Entry-controlled loop</td>
+          <td style="border: 1px solid black; padding: 8px; text-align: left;">Exit-controlled loop</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid black; padding: 8px; text-align: left;">Runs while the condition is true</td>
+          <td style="border: 1px solid black; padding: 8px; text-align: left;">Runs until the condition becomes false</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid black; padding: 8px; text-align: left;">Checks the condition first and then executes the body</td>
+          <td style="border: 1px solid black; padding: 8px; text-align: left;">Executes the body and then checks the condition</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid black; padding: 8px; text-align: left;">Executes the body zero times if the condition is initially false</td>
+          <td style="border: 1px solid black; padding: 8px; text-align: left;">Executes the body at least once, regardless of the initial condition</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid black; padding: 8px; text-align: left;">Checks the loop condition n times for n iterations</td>
+          <td style="border: 1px solid black; padding: 8px; text-align: left;">Checks the loop condition n times, with n being the number of iterations</td>
+        </tr>
+      </table>
+      
+      <p>While loops are versatile and run as long as the condition is met, whereas do-while loops are used in situations where the loop's body must run at least once before checking the condition.</p>
+
+      <h2>Alternatives to Emulate Do-While Loops in Python</h2>
+      <p>Python doesn't have a built-in do-while loop, but you can emulate this behavior using various techniques. The most common method is to use an infinite while loop with a break statement to exit the loop when needed. Other alternatives may involve running the first operation before the loop or initializing the loop condition to true.</p>
+  </body>
+  </html>
+{% endblock %}

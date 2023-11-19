@@ -1,0 +1,117 @@
+{% extends "master.html" %}
+{% load static %}
+{% block title %}
+  Details about {{ mymember.firstname }}
+{% endblock %}
+
+{% block content %}
+<h1 style="color: blue;">{{ mymember.topic_name }}</h1>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+          font-family: 'Arial', sans-serif;
+          margin: 20px;
+          background-color: #f8f8f8;
+        }
+    
+        .container {
+          width: 80%;
+          margin: 0 auto;
+          background-color: #fff;
+          padding: 20px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    
+        h1, h2, h3 {
+          color: black;
+          text-align: center;
+        }
+    
+        p {
+          color: #555;
+          line-height: 1.5;
+        }
+    
+        code {
+          background-color: #f4f4f4;
+          padding: 4px;
+          border-radius: 4px;
+          font-family: 'Courier New', monospace;
+        }
+    
+        pre {
+          background-color: #f4f4f4;
+          padding: 10px;
+          border-radius: 6px;
+          overflow-x: auto;
+        }
+    
+        h2 {
+          margin-top: 20px;
+        }
+    
+        .exercise {
+          margin-top: 20px;
+          background-color: #eaeaea;
+          padding: 15px;
+          border-radius: 8px;
+        }
+      </style>
+</head>
+<body>
+    <h2>Constructors in Python</h2>
+    <p>In Python, a constructor is a special type of method used to initialize the object of a Class. The constructor will be executed automatically when the object is created. If we create three objects, the constructor is called three times and initializes each object.</p>
+    <p>The main purpose of the constructor is to declare and initialize instance variables. It can take at least one argument that is <code>self</code>. The <code>__init()__</code> method is called the constructor in Python. In other words, the name of the constructor should be <code>__init__(self)</code>.</p>
+    <p>A constructor is optional, and if we do not provide any constructor, then Python provides the default constructor. Every class in Python has a constructor, but it's not required to define it.</p>
+    <a href="#">Read More: Constructors in Python</a>
+
+    <h2>Python Destructors to Destroy the Object</h2>
+    <p>Python Destructors to Destroy the Object</p>
+    <p>TODO: Add content for Python Destructors</p>
+
+    <h2>Encapsulation in Python</h2>
+    <p>In Python, encapsulation is a method of wrapping data and functions into a single entity. For example, a class encapsulates all the data (methods and variables). Encapsulation means the internal representation of an object is generally hidden from outside of the object's definition.</p>
+    <p>Need of Encapsulation</p>
+    <p>Encapsulation acts as a protective layer. We can restrict access to methods and variables from outside, and it can prevent the data from being modified by accidental or unauthorized modification. Encapsulation provides security by hiding the data from the outside world.</p>
+    <a href="#">Read the complete guide on Encapsulation in Python.</a>
+
+    <h2>Example: Encapsulation in Python</h2>
+    <p>When you create a class, it means you are implementing encapsulation. A class is an example of encapsulation as it binds all the data members (instance variables) and methods into a single unit.</p>
+    <p>In Python, we do not have access modifiers, such as public, private, and protected. But we can achieve encapsulation by using prefix single underscore and double underscore to control access of variable and method within the Python program.</p>
+
+    <pre>
+    <code>
+class Employee:
+    def __init__(self, name, salary):
+        # public member
+        self.name = name
+        # private member
+        # not accessible outside of a class
+        self.__salary = salary
+
+    def show(self):
+        print("Name is ", self.name, "and salary is", self.__salary)
+
+emp = Employee("Jessa", 40000)
+emp.show()
+
+# access salary from outside of a class
+print(emp.__salary)
+    </code>
+    </pre>
+    <p><strong>Run</strong></p>
+    <p>Output:</p>
+    <pre>
+    <code>
+Name is  Jessa and salary is 40000
+Traceback (most recent call last):
+  File "&lt;stdin&gt;", line 20, in &lt;module&gt;
+AttributeError: 'Employee' object has no attribute '__salary'
+    </code>
+    </pre>
+</body>
+</html>
+{% endblock %}

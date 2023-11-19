@@ -1,0 +1,40 @@
+
+
+body {
+
+    font-family: Arial, sans-serif;
+    background-color: smoke white;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+h1 {
+    color: #333;
+}
+h2 {
+    color: #444;
+}
+p {
+    color: #555;
+}
+code {
+    background-color:red ;
+    padding: 2px 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-family: monospace;
+}
+pre {
+    background-color: light ;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+code {
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+}

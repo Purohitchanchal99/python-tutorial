@@ -1,0 +1,79 @@
+{% extends "master.html" %}
+
+{% block title %}
+  Details about {{ mymember.firstname }}
+{% endblock %}
+
+{% block content %}
+  <h1 style="color: blue;">{{ mymember.topic_name }}</h1>
+  <p>{{ mymember.description }}</p>
+
+  <p>Python Implicit Type Conversion</p>
+
+  <p>In certain situations, Python automatically converts one data type to another. This is known as implicit type conversion.</p>
+
+  <!-- Example 1: Converting integer to float -->
+  <p>Let's see an example where Python promotes the conversion of the lower data type (integer) to the higher data type (float) to avoid data loss.</p>
+
+  <code>
+    integer_number = 123<br>
+    float_number = 1.23<br>
+    new_number = integer_number + float_number<br>
+    # display new value and resulting data type<br>
+    print("Value:", new_number)<br>
+    print("Data Type:", type(new_number))
+  </code>
+
+  <!-- Output -->
+  <p>Output</p>
+  <code>
+    Value: 124.23<br>
+    Data Type: &lt;class 'float'&gt;
+  </code>
+
+  <!-- In the above example, we have created two variables: integer_number and float_number of int and float type respectively. -->
+  <!-- Then we added these two variables and stored the result in new_number. -->
+  <!-- As we can see new_number has value 124.23 and is of the float data type. -->
+  <!-- It is because Python always converts smaller data types to larger data types to avoid the loss of data. -->
+
+  <p>Note:</p>
+  <p>We get TypeError if we try to add str and int. For example, '12' + 23. Python is not able to use Implicit Conversion in such conditions.</p>
+
+  <p>Python has a solution for these types of situations which is known as Explicit Conversion.</p>
+
+  <!-- Example 2: Addition of string and integer Using Explicit Conversion -->
+  <p>Let's look at an example of explicit type conversion by adding a string and an integer:</p>
+  <code>
+    num_string = '12'<br>
+    num_integer = 23<br>
+    print("Data type of num_string before Type Casting:", type(num_string))<br>
+    # explicit type conversion<br>
+    num_string = int(num_string)<br>
+    print("Data type of num_string after Type Casting:", type(num_string))<br>
+    num_sum = num_integer + num_string<br>
+    print("Sum:", num_sum)<br>
+    print("Data type of num_sum:", type(num_sum))
+  </code>
+
+  <!-- Output -->
+  <p>Output</p>
+  <code>
+    Data type of num_string before Type Casting: &lt;class 'str'&gt;<br>
+    Data type of num_string after Type Casting: &lt;class 'int'&gt;<br>
+    Sum: 35<br>
+    Data type of num_sum: &lt;class 'int'&gt;
+  </code>
+
+  <!-- Key Points to Remember -->
+  <p>Key Points to Remember</p>
+  <ul>
+    <li>Type Conversion is the conversion of an object from one data type to another data type.</li>
+    <li>Implicit Type Conversion is automatically performed by the Python interpreter.</li>
+    <li>Python avoids the loss of data in Implicit Type Conversion.</li>
+    <li>Explicit Type Conversion is also called Type Casting; the data types of objects are converted using predefined functions by the user.</li>
+    <li>In Type Casting, loss of data may occur as we enforce the object to a specific data type.</li>
+  </ul>
+
+  <!-- Rest of your content... -->
+
+{% endblock %}

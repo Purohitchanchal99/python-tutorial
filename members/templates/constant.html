@@ -1,0 +1,41 @@
+{% extends "master.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Python Variables, Constants, and Literals{% endblock %}</title>
+</head>
+<body>
+    <div id="content">
+        {% block content %}
+       
+        <h1 style="color: blue;">{{ mymember.topic_name }}</h1>
+        <p>{{ mymember.description }}</p>
+       
+        <p>In Python, constants are usually declared and assigned in a module (a new file containing variables, functions, etc which is imported to the main file).</p>
+
+        <p>Let's see how we declare constants in a separate file and use them in the main file.</p>
+
+        <p>Create a <code>constants.py</code> file:</p>
+
+        <pre>
+# Declare constants
+PI = 3.14
+GRAVITY = 9.8
+        </pre>
+
+        <p>Create a <code>main.py</code> file:</p>
+
+        <pre>
+# Import the constant file we created above
+import constants
+
+print(constants.PI)  # Prints 3.14
+print(constants.GRAVITY)  # Prints 9.8
+        </pre>
+        </p>
+        {% endblock %}
+    </div>
+</body>
+</html>

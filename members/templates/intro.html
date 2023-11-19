@@ -1,0 +1,135 @@
+<!-- yourapp/templates/template.html -->
+
+
+{% extends "master.html" %}
+{%load static%}
+{% block title %}
+  Details about {{ mymember.firstname }}
+{% endblock %}
+
+{% block content %}
+  <style>
+    .content-box {
+      background-color: white;
+      color: black;
+      padding: 10px;
+      border: 1px solid #ccc;
+      margin-bottom: 20px;
+    }
+
+    .example-box {
+      background-color: white;
+      color: black;
+      padding: 10px;
+      border: 1px solid #ccc;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+
+    .green-heading {
+      color: green;
+    }
+
+    .blue-heading {
+      color: blue;
+    }
+    .flow-diagram {
+        margin: 0 auto; /* Center the image horizontally */
+        display: block; /* Ensure it's treated as a block-level element */
+    }
+  </style>
+
+  <h1 class="blue-heading">{{ mymember.topic_name }}</h1>
+  <p>{{ mymember.description }}</p>
+
+  <div class="content-box">
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Overview</title>
+    
+   
+    
+    
+  </head>
+  <body>
+      <!-- Your existing content here -->
+
+      <div id="content">
+        
+        
+
+
+       
+        <p>
+            Python is a powerful, versatile, and beginner-friendly programming language. It has gained widespread popularity in various fields, making it an ideal choice for newcomers.
+        </p>
+        <p>
+            Python's clear and readable syntax simplifies the process of learning and writing code, making it a great language for beginners. Here are some key points to consider:
+        </p>
+        <p>
+            <strong>1. Readability:</strong> Python's code is highly readable and resembles plain English, which makes it easy to understand and write.
+        </p>
+        <p>
+            <strong>2. Versatile:</strong> Python is versatile and can be used for web development, data analysis, scientific computing, automation, artificial intelligence, and more.
+        </p>
+        <p>
+            <strong>3. Strong Community:</strong> Python has a vast and active community that offers support, extensive documentation, and numerous libraries to help you in your programming journey.
+        </p>
+        <p>
+            Whether you're interested in web development, data science, or creating your own projects, Python is a great choice for anyone starting their programming journey.
+        </p>
+        
+        <img class="flow-diagram" src="{% static 'images/python feature.jpeg' %}" alt="Inheritance Flow Diagram">
+
+        <p> let see first program in python for better Understanding</p>
+    </div>
+    <div class="code">
+        # Script Begins<br>
+        <br>
+        print("GeeksQuiz")<br>
+        <br>
+        # Scripts Ends
+    </div>
+    <p>
+        Output:
+    </p>
+    <div class="code">
+        GeeksQuiz
+    </div>
+    <p>
+        Let’s analyze the script line by line.
+    </p>
+    <p>
+        <strong>Line 1:</strong> [# Script Begins] In Python, comments begin with a #. This statement is ignored by the interpreter and serves as documentation for our code.
+    </p>
+    <p>
+        <strong>Line 2:</strong> [print("GeeksQuiz")] To print something on the console, print() function is used. This function also adds a newline after our message is printed (unlike in C). Note that in Python 2, “print” is not a function but a keyword and therefore can be used without parentheses. However, in Python 3, it is a function and must be invoked with parentheses.
+    </p>
+    <p>
+        <strong>Line 3:</strong> [# Script Ends] This is just another comment like in Line 1.
+    </p>
+    <p>
+        Python, designed by Guido van Rossum at CWI, has become a widely used general-purpose, high-level programming language.
+    </p>
+    <h2>Prerequisites</h2>
+    <p>
+        Knowledge of any programming language can be a plus.
+    </p>
+    <h2>Reason for Increasing Popularity</h2>
+    <p>
+        Python's increasing popularity can be attributed to several factors, including:
+    </p>
+    <ul>
+        <li>Emphasis on code readability and shorter, more concise code.</li>
+        <li>Programmers can express logical concepts in fewer lines of code compared to languages such as C++ or Java.</li>
+        <li>Python supports multiple programming paradigms, such as object-oriented, imperative, functional, and procedural programming.</li>
+        <li>There exist built-in functions for almost all frequently used concepts.</li>
+        <li>The philosophy of Python is "Simplicity is the best," which contributes to its ease of use and approachability for newcomers.</li>
+    </ul>
+</body>
+  </body>
+  </html>
+{% endblock %}

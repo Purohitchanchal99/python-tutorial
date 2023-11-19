@@ -1,0 +1,187 @@
+{% extends "master.html" %}
+{% load static %}
+
+{% block title %}
+  Details about {{ flow.topic_name }}
+{% endblock %}
+
+{% block content %}
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 20px;
+      background-color: #f8f8f8;
+    }
+
+    .container {
+      width: 80%;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1, h2, h3 {
+      color: black;
+      text-align: center;
+    }
+
+    p {
+      color: #555;
+      line-height: 1.5;
+    }
+
+    code {
+      background-color: #f4f4f4;
+      padding: 4px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+    }
+
+    pre {
+      background-color: #f4f4f4;
+      padding: 10px;
+      border-radius: 6px;
+      overflow-x: auto;
+    }
+
+    h2 {
+      margin-top: 20px;
+    }
+
+    .exercise {
+      margin-top: 20px;
+      background-color: #eaeaea;
+      padding: 15px;
+      border-radius: 8px;
+    }
+  </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Python Functions Guide</h1>
+      <p>Functions in Python are blocks of statements that perform a specific task. They enhance code readability and reusability by grouping common tasks together. Here are some benefits of using functions:</p>
+
+      <h2>Benefits of Using Functions</h2>
+      <p>Functions in Python offer several advantages, including:</p>
+      <p>1. Increase Code Readability</p>
+      <p>2. Increase Code Reusability</p>
+
+      <h2>Python Function Declaration</h2>
+      <p>The syntax for declaring a function in Python is:</p>
+      <pre><code>
+def function_name(parameters):
+      """Docstring"""
+      # body of the function
+      return expression
+      </code></pre>
+
+      <h2>Types of Functions in Python</h2>
+      <p>There are mainly two types of functions in Python:</p>
+      <p>1. Built-in library function: Standard functions in Python that are available to use.</p>
+      <p>2. User-defined function: Functions created based on specific requirements.</p>
+
+      <h2>Creating a Function in Python</h2>
+      <p>We can create a user-defined function in Python using the <code>def</code> keyword. Here's a simple example:</p>
+      <pre><code>
+# A simple Python function 
+def fun():
+    print("Welcome to GFG")
+fun()
+      </code></pre>
+
+      <h2>Python Function with Parameters</h2>
+      <p>If you have experience in C/C++ or Java, you can define the data type of arguments and the return type in Python (specifically for Python 3.5 and above). Example:</p>
+      <pre><code>
+def add(num1: int, num2: int) -> int:
+    """Add two numbers"""
+    num3 = num1 + num2
+    return num3
+
+num1, num2 = 5, 15
+ans = add(num1, num2)
+print(f"The addition of {num1} and {num2} results {ans}.")
+      </code></pre>
+
+      <h2>Types of Python Function Arguments</h2>
+      <p>Python supports various types of function arguments:</p>
+
+      <h2>Docstring</h2>
+      <p>The first string after the function is called the Docstring. It is used to describe the functionality of the function. Example:</p>
+      <pre><code>
+# A simple Python function to check whether x is even or odd
+def evenOdd(x):
+    """Function to check if the number is even or odd"""
+    if (x % 2 == 0):
+        print("even")
+    else:
+        print("odd")
+print(evenOdd.__doc__)
+      </code></pre>
+
+      <h2>Python Function within Functions</h2>
+      <p>A function defined inside another function is known as the inner function or nested function. Nested functions can access variables of the enclosing scope. Example:</p>
+      <pre><code>
+# Python program to demonstrate accessing variables of nested functions
+def f1():
+    s = 'I love Green'
+    def f2():
+        print(s)
+    f2()
+f1()
+      </code></pre>
+
+      <h2>Anonymous Functions in Python</h2>
+      <p>Anonymous functions in Python, known as lambda functions, are functions without a name. Example:</p>
+      <pre><code>
+# Python code to illustrate the cube of a number using a lambda function
+cube = lambda x: x*x*x
+print(cube(7))
+      </code></pre>
+
+      <h2>Return Statement in Python Function</h2>
+      <p>The return statement is used to exit from a function and return a specified value to the caller. Example:</p>
+      <pre><code>
+def square_value(num):
+    """This function returns the square value of the entered number"""
+    return num**2
+print(square_value(2))
+      </code></pre>
+
+      <h2>Pass by Reference and Pass by Value</h2>
+      <p>Parameter passing in Python is similar to reference passing in Java. Example:</p>
+      <pre><code>
+# Here x is a new reference to the same list lst
+def myFun(x):
+    x[0] = 20
+
+# Driver Code (Note that lst is modified after function call)
+lst = [10, 11, 12, 13, 14, 15]
+myFun(lst)
+print(lst)
+      </code></pre>
+
+      <p>When we pass a reference and change the received reference to something else, the connection between the passed and received parameter is broken. For example:</p>
+      <pre><code>
+def myFun(x):
+    x = [20, 30, 40]
+
+# Driver Code (Note that lst is not modified after function call)
+lst = [10, 11, 12, 13, 14, 15]
+myFun(lst)
+print(lst)
+      </code></pre>
+
+      <p>Another example demonstrates that the reference link is broken if we assign a new value (inside the function):</p>
+      <pre><code>
+def myFun(x):
+    x = 20
+
+# Driver Code (Note that x is not modified after function call)
+x = 10
+myFun(x)
+print(x)
+      </code></pre>
+
+      
+        {% endblock %}

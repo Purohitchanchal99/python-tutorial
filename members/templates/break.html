@@ -1,0 +1,95 @@
+{% extends "master.html" %}\ 
+{%load static%} 
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Break and Continue</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      margin: 20px;
+    }
+    h1 {
+      color: #0074d9;
+    }
+    p {
+      margin: 10px 0;
+    }
+    .code {
+      font-family: monospace;
+      background-color: #f7f7f7;
+      padding: 5px;
+      border: 1px solid #ddd;
+    }
+    .image {
+      max-width: 100%;
+      border: 1px solid #ddd;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+    <div id="content">
+      
+        <body>
+        <div class="container">
+            <h1>Python Break and Continue</h1>
+            <p>
+              In Python, the <strong>break</strong> and <strong>continue</strong> statements are used to control the flow of loops.
+            </p>
+            <p>
+              The <strong>break</strong> statement is used to exit the current loop prematurely. It is often used to terminate a loop when a certain condition is met.
+            </p>
+            <div class="code">
+              <p>for i in range(1, 6):</p>
+              <p>&emsp;if i == 3:</p>
+              <p>&emsp;&emsp;break</p>
+              <p>&emsp;print(i)</p>
+            </div>
+            <p>
+              The above code will print numbers from 1 to 2 because the loop is terminated when <code>i == 3</code>.
+            </p>
+            <p>
+              <strong>Illustration of the Break Statement:</strong>
+            </p>
+            
+            <img class="flow-diagram" src="{% static 'working-break-statement-python (1).png' %}">
+            <p>
+              The image above illustrates the flow of the <strong>break</strong> statement in a loop.
+            </p>
+            <p>
+              The <strong>continue</strong> statement is used to skip the current iteration of a loop and continue with the next iteration. It is often used when you want to skip certain items in a loop.
+            </p>
+            <div class="code">
+              <p>for i in range(1, 6):</p>
+              <p>&emsp;if i == 3:</p>
+              <p>&emsp;&emsp;continue</p>
+              <p>&emsp;print(i)</p>
+            </div>
+            <p>
+              The above code will print numbers from 1 to 5, skipping the iteration where <code>i == 3</code>.
+            </p>
+            <p>
+              <strong>Illustration of the Continue Statement:</strong>
+            </p>
+            <img class="flow-diagram" src="{% static 'working-continue-statement-python.png' %}">
+          
+            <p>
+              The image above illustrates the flow of the <strong>continue</strong> statement in a loop.
+            </p>
+          </div>
+        </body>
+        </html>
+        {% endblock %}

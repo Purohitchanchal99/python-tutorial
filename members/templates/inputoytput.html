@@ -1,0 +1,159 @@
+{% extends "master.html" %}
+{% block title %}
+  Details about {{ mymember.firstname }} 
+{% endblock %}
+<!DOCTYPE html>
+<html>
+<head>
+    
+</head>
+<body>
+    {% block content %}
+     
+    
+
+
+
+    <h1 style="color: blue;">Python Input and Output</h1>
+    
+    <h4>Python Output</h4>
+    <p>In Python, we can use the <code>print()</code> function to display output. For example:</p>
+    
+    <pre>
+        <code>
+print('Python is powerful')
+
+# Output: Python is powerful
+        </code>
+    </pre>
+    
+    <p>The <code>print()</code> function displays the string enclosed inside single quotations.</p>
+    
+    <h3>Syntax of print()</h3>
+    <p>The <code>print</code> function accepts several parameters:</p>
+    <ul>
+        <li><strong>object</strong>: Value(s) to be printed.</li>
+        <li><strong>sep (optional)</strong>: Allows separation of multiple objects inside <code>print()</code>.</li>
+        <li><strong>end (optional)</strong>: Allows the addition of specific values like a new line "\n" or a tab "\t".</li>
+        <li><strong>file (optional)</strong>: Specifies where the values are printed. Default value is <code>sys.stdout</code> (screen).</li>
+        <li><strong>flush (optional)</strong>: A boolean specifying if the output is flushed or buffered. Default: False.</li>
+    </ul>
+    
+    <h3>Example: Python Print Statement</h3>
+    <pre>
+        <code>
+print('Good Morning!')
+print('It is rainy today')
+        </code>
+    </pre>
+    
+    <p>Output:</p>
+    
+    <pre>
+        <code>
+Good Morning!
+It is rainy today
+        </code>
+    </pre>
+    
+    <h3>Example: Python <code>print()</code> with <code>end</code> Parameter</h3>
+    <pre>
+        <code>
+# Print with end whitespace
+print('Good Morning!', end=' ')
+
+print('It is rainy today')
+        </code>
+    </pre>
+    
+    <h3>Example: Python <code>print()</code> with <code>sep</code> Parameter</h3>
+    <pre>
+        <code>
+print('New Year', 2023, 'See you soon!', sep='. ')
+        </code>
+    </pre>
+    
+    <h3>Example: Print Python Variables and Literals</h3>
+    <pre>
+        <code>
+number = -10.6
+name = "Programiz"
+
+# Print literals     
+print(5)
+
+# Print variables
+print(number)
+print(name)
+        </code>
+    </pre>
+    
+    <h3>Example: Print Concatenated Strings</h3>
+    <pre>
+        <code>
+print('Programiz is ' + 'awesome.')
+        </code>
+    </pre>
+    
+    <h3>Output Formatting</h3>
+    <p>Sometimes we would like to format our output to make it look attractive. This can be done by using the <code>str.format()</code> method. For example:</p>
+    <pre>
+        <code>
+x = 5
+y = 10
+
+print('The value of x is {} and y is {}'.format(x, y))
+        </code>
+    </pre>
+    
+    <h2>Python Input</h2>
+    <p>When programming, we often want to take input from the user. In Python, we can use the <code>input()</code> function.</p>
+    
+    <h3>Syntax of <code>input()</code></h3>
+    <pre>
+        <code>
+input(prompt)
+        </code>
+    </pre>
+    
+    <p>Here, <code>prompt</code> is the string to display on the screen (optional).</p>
+    
+    <h3>Example: Python User Input</h3>
+    <pre>
+        <code>
+# Using <code>input()</code> to take user input
+num = input('Enter a number: ')
+
+print('You Entered:', num)
+
+print('Data type of num:', type(num))
+        </code>
+    </pre>
+    
+    <p>Output:</p>
+    
+    <pre>
+        <code>
+Enter a number: 10
+You Entered: 10
+Data type of num: &lt;class 'str'&gt;
+        </code>
+    </pre>
+    
+    <p>It's important to note that the entered value "10" is a string, not a number. To convert user input into a number, we can use <code>int()</code> or <code>float()</code> functions, like this:</p>
+    
+    <pre>
+        <code>
+num = int(input('Enter a number: '))
+        </code>
+    </pre>
+    
+    <p>Here, the data type of the user input is converted from a string to an integer.</p>
+
+
+
+
+
+    {% endblock %}
+</body>
+</html> 

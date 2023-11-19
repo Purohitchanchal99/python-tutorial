@@ -1,0 +1,77 @@
+
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Python Variables, Constants, and Literals{% endblock %}</title>
+    <link rel="stylesheet"  href="{% static 'css/comment.css' %}">
+</head>
+<body>
+    <div id="content">
+        {% block content %}
+       
+        <h1 style="color: blue;">{{ mymember.topic_name }}</h1>
+        <p>{{ mymember.description }}</p>
+        <h1>Types of Comments in Python</h1>
+<p>comments in Python are the lines in the code that are ignored by the interpreter during the execution of the program. Comments enhance the readability of the code and help the programmers to understand the code very carefully.
+
+    There are three types of comments in Python:
+    
+    Single line Comments
+    Multiline Comments
+    Docstring Comments
+</p>
+    <h3>Single-line Comment in Python</h3>
+    <p>A single-line comment starts and ends on the same line and uses the # symbol. For example:</p>
+    <pre>
+        # create a variable
+        name = 'Eric Cartman'
+
+        # print the value
+        print(name)
+    </pre>
+    <p>Output:</p>
+    <pre>
+        Eric Cartman
+    </pre>
+
+    <h2>Multi-line Comment in Python</h2>
+    <p>Python does not provide a dedicated syntax for multiline comments, but you can achieve it in a couple of ways:</p>
+
+    <p>1. Using # at the beginning of each line for multiline comments:</p>
+    <pre>
+        # This is a long comment
+        # and it extends
+        # to multiple lines
+    </pre>
+
+    <p>2. Using triple quotes (''' or """) for multiline comments:</p>
+    <pre>
+        ''' This is also a
+        perfect example of
+        multi-line comments '''
+    </pre>
+
+    <p>While triple-quoted strings are typically used for multi-line strings, if they are not assigned to any variable or function, they can serve as multiline comments. The interpreter will ignore them in this case.</p>
+
+    <h2>Use of Python Comment</h2>
+    <ol>
+        <li><strong>Make Code Easier to Understand:</strong> Comments help in making the code more understandable, both for future reference and for other developers.</li>
+        <li><strong>Using Comments for Debugging:</strong> Comments can be temporarily used to disable specific lines of code that cause errors during debugging.</li>
+    </ol>
+
+    <p>For example:</p>
+    <pre>
+        print('Python')
+
+        # print('Error Line)
+
+        print('Django')
+    </pre>
+
+    <p>In this case, the line <code>print('Error Line)</code> is commented to avoid the error during program execution.</p>
+    {% endblock %}
+</body>
+</html>

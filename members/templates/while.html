@@ -1,0 +1,148 @@
+{% extends "master.html" %}
+{% load static %}
+
+{% block title %}
+  Details about {{ mymember.firstname }}
+{% endblock %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      color: blue;
+    }
+
+    .container {
+      background-color: #f5f5f5;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin: 20px;
+    }
+
+    .blue-text {
+      color: blue;
+    }
+
+    .flow-diagram {
+      max-width: 100%;
+    }
+
+    ul {
+      list-style-type: disc;
+      margin-left: 20px;
+    }
+
+    .example-box {
+      background-color: #f5f5f5;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin: 20px;
+    }
+  </style>
+</head>
+<body>
+  {% block content %}
+    
+    <h2 class="blue-text">The while Loop</h2>
+    <div class="container">
+      <p>A "while" loop is a fundamental control structure in programming that allows a specific block of code to be executed repeatedly as long as a certain condition remains true. It is used to create loops or iterations in your program, where a set of instructions is executed over and over again until the specified condition is no longer met.</p>
+     
+    </div>
+
+   
+    <div class="container">
+      <p>With the while loop, we can execute a set of statements as long as a condition is true.</p>
+      <p>While Loop is used to execute a block of statements repeatedly until a given condition is satisfied. When the condition becomes false, the line immediately after the loop in the program is executed.</p>
+    </div>
+
+    <h2 class="blue-text">Syntax:</h2>
+    <div class="example-box">
+      <pre>
+        while expression:
+            statement(s)
+      </pre>
+      <p><em>Example:</em></p>
+      <code>
+        i = 1
+        while i < 6:
+          print(i)
+          i += 1
+      </code>
+      <p><em>Note:</em> Remember to increment `i`, or else the loop will continue forever.</p>
+    </div>
+
+    <h2 class="blue-text">Flowchart :</h2>
+    <div class="container" style="text-align: center;">
+      <img class="flow-diagram" src="{% static 'while.jpeg' %}">
+    </div>
+    <div class="container">
+      <p>While loop falls under the category of indefinite iteration. Indefinite iteration means that the number of times the loop is executed isn't specified explicitly in advance.</p>
+      <p>Statements represent all the statements indented by the same number of character spaces after a programming construct are considered to be part of a single block of code. Python uses indentation as its method of grouping statements. When a while loop is executed, expr is first evaluated in a Boolean context, and if it is true, the loop body is executed. Then the expr is checked again, if it is still true, then the body is executed again, and this continues until the expression becomes false.</p>
+    </div>
+
+    <h2 class="blue-text">Example 1: Python While Loop</h2>
+    <div class="example-box">
+      <pre>
+        <code>
+count = 0
+while (count < 3):
+    count = count + 1
+    print("Hello Geek")
+        </code>
+      </pre>
+      <p>Output:</p>
+      <pre>
+        Hello Geek
+        Hello Geek
+        Hello Geek
+      </pre>
+    </div>
+
+    <h2 class="blue-text">Example 2: Python while loop with list</h2>
+    <div class="example-box">
+      <pre>
+        <code>
+a = [1, 2, 3, 4]
+ 
+while a:
+    print(a.pop())
+        </code>
+      </pre>
+      <p>Output:</p>
+      <pre>
+        4
+        3
+        2
+        1
+      </pre>
+    </div>
+
+    <h2 class="blue-text">Example 3: Single statement while block</h2>
+    <div class="example-box">
+      <pre>
+        <code>
+count = 0
+while (count < 5): 
+count += 1; 
+print("Hello ")
+        </code>
+      </pre>
+      <p>Output:</p>
+      <pre>
+        Hello 
+        Hello 
+        Hello 
+        Hello 
+        Hello 
+      </pre>
+    </div>
+  {% endblock %}
+</body>
+</html>

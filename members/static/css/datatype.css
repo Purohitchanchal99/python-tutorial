@@ -1,0 +1,156 @@
+{% extends "master.html" %}
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #343a40;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: blue;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .flow-diagram {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #007bff;
+        }
+
+        h3 {
+            color: #28a745;
+        }
+
+        pre {
+            background-color: #f2f2f2;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            overflow-x: auto;
+        }
+
+        code {
+            font-family: monospace;
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Inheritance in Python</h1>
+
+        <p>Inheritance is a fundamental concept in object-oriented programming (OOP) that allows you to create a new class by deriving properties and behaviors from an existing class. In Python, you can create a subclass that inherits attributes and methods from a superclass.</p>
+       
+        <img class="flow-diagram" src="{% static 'images/inheritance-768x432.webp' %}" alt="Inheritance Flow Diagram">
+
+        <h2>Types of Inheritance</h2>
+        <p>There are several types of inheritance in Python:</p>
+
+        <h3>Single Inheritance</h3>
+        <pre><code>
+class Animal:
+    def speak(self):
+        pass
+
+class Dog(Animal):
+    def speak(self):
+        return "Woof!"
+        </code></pre>
+
+        <h3>Multiple Inheritance</h3>
+        <pre><code>
+class Parent1:
+    def method1(self):
+        pass
+
+class Parent2:
+    def method2(self):
+        pass
+
+class Child(Parent1, Parent2):
+    def child_method(self):
+        pass
+        </code></pre>
+
+        <h3>Multilevel Inheritance</h3>
+        <pre><code>
+class Grandparent:
+    def grandparent_method(self):
+        pass
+
+class Parent(Grandparent):
+    def parent_method(self):
+        pass
+
+class Child(Parent):
+    def child_method(self):
+        pass
+        </code></pre>
+
+        <h3>Hierarchical Inheritance</h3>
+        <pre><code>
+class Animal:
+    def speak(self):
+        pass
+
+class Dog(Animal):
+    def speak(self):
+        return "Woof!"
+
+class Cat(Animal):
+    def speak(self):
+        return "Meow!"
+        </code></pre>
+
+        <h2>Example:</h2>
+        <p>Let's create an example of multiple inheritance in Python:</p>
+        <pre><code>
+class Parent1:
+    def method1(self):
+        return "Method from Parent1"
+
+class Parent2:
+    def method2(self):
+        return "Method from Parent2"
+
+class Child(Parent1, Parent2):
+    def child_method(self):
+        return "Child's own method"
+            
+child = Child()
+print(child.method1())       # Output: "Method from Parent1"
+print(child.method2())       # Output: "Method from Parent2"
+print(child.child_method())  # Output: "Child's own method"
+        </code></pre>
+    </div>
+</body>
+</html>
+
+{% endblock %}

@@ -1,0 +1,47 @@
+ {% extends "master.html" %}
+{% block title %}
+  Python Tutorial - List of all modules
+{% endblock %}
+
+{% block content %}
+  <div class="mycard">
+    <h1>Basic</h1>
+    <ul>
+      {% for x in mymembers %}
+        <li onclick="window.location = 'details/{{ x.id }}'">{{ x.topic_name }} </li>
+      {% endfor %}
+    </ul>
+  </div>  
+  
+  <div class="mycard">
+    <h1>Control flow</h1>
+    <ul>
+      {% for x in cmembers %}
+        <li onclick="window.location = 'control/{{ x.id }}'">{{ x.topic_name }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="mycard">
+    <h1>OOP concept</h1>
+    <ul>
+      {% for x in coops %}
+        <li onclick="window.location = 'object/{{ x.id }}'">{{ x.topic_name }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  
+  <div class="mycard">
+    <h1>functions</h1>
+    <ul>
+      {% for x in cfunction %}
+        <li onclick="window.location = 'function/{{ x.id }}'">{{ x.topic_name }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endblock %} 
+
+
+
+
+
